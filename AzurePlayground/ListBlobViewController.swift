@@ -77,12 +77,11 @@ class ListBlobViewController: UIViewController, UITableViewDelegate, UITableView
                 print("\(error.localizedDescription)")
                 return
             }
-            if let _ = data {
-                var image = UIImage(data: data!)
-                
-                DispatchQueue.main.async {
-                    /// pasar la imagen al main thread
-                    print("\(image?.size)")
+            if let data = data {
+                if let image = UIImage(data: data){
+                    DispatchQueue.main.async {
+                        print("\(image.size)")
+                    }
                 }
             }
         }
