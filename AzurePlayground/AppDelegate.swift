@@ -16,9 +16,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        var client = MSClient(
+        let client = MSClient(
             applicationURLString:"https://kcerisco.azurewebsites.net"
         )
+        
+        let tableTable1 = client.table(withName: "table1")
+        
+        let row = ["name": "Eric", "secondname": "RISCO", "thirdname": "DE LA TORRE", "age": "40"]
+        
+        tableTable1.insert(row) { (dict, error) in
+            if let error = error {
+                print("\(error.localizedDescription)")
+                return
+            }
+            
+            print(dict!)
+            
+        }
+        
+        let predicate = NSPredicate(format: "name == Eric")
+        
+        tableTable1.read(with: predicate) { (dict, error) in
+            if let error = error {
+                print("\(error.localizedDescription)")
+                return
+            }
+            
+            print(dict!)
+        }
+        
         
         return true
     }
