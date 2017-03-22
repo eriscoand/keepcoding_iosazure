@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var blobClient: AZSCloudBlobClient!
     @IBOutlet weak var tableView: UITableView!
     
-    var model: [Any] = []
+    var model: [AZSCloudBlobContainer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         setupAzureStorageConnect()
         readAllContainers()
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "showList"){
+            let vc = segue.destination as! ListBlobViewController
+            vc.blobClient = self.blobClient
+            vc.container = sender as! AZSCloudBlobContainer
+        }
         
     }
 
@@ -81,7 +92,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                             }
                                             
                                             if let containerResults = containerResults {
-                                                self.model = containerResults.results
+                                                self.model = containerResults.results as! [AZSCloudBlobContainer]
                                             }
                                             
                                             DispatchQueue.main.async {
@@ -111,11 +122,19 @@ extension ViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CELLID", for: indexPath) as UITableViewCell
         
-        let item = model[indexPath.row] as! AZSCloudBlobContainer
+        let item = model[indexPath.row]
         
         cell.textLabel?.text = item.name
         
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let item = model[indexPath.row] as AZSCloudBlobContainer
+        
+        performSegue(withIdentifier: "showList", sender: item)
         
     }
     

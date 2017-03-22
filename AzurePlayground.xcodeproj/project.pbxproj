@@ -15,6 +15,8 @@
 		3308FA7D1E81D0D70002F8EB /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3308FA7C1E81D0D70002F8EB /* libxml2.2.tbd */; };
 		33CD06C81E81D9ED00229C11 /* AZSClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CD06C71E81D9ED00229C11 /* AZSClient.framework */; };
 		33CD06CA1E81F0CD00229C11 /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD06C91E81F0CD00229C11 /* CONSTANTS.swift */; };
+		33CD06CC1E830D9600229C11 /* ListBlobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD06CB1E830D9600229C11 /* ListBlobViewController.swift */; };
+		33CD06D01E831D3A00229C11 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33CD06CF1E831D3A00229C11 /* test.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		3308FA7E1E81D1E50002F8EB /* AzurePlayground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AzurePlayground-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		33CD06C71E81D9ED00229C11 /* AZSClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AZSClient.framework; sourceTree = "<group>"; };
 		33CD06C91E81F0CD00229C11 /* CONSTANTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
+		33CD06CB1E830D9600229C11 /* ListBlobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBlobViewController.swift; sourceTree = "<group>"; };
+		33CD06CF1E831D3A00229C11 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +68,11 @@
 		3308FA661E81CF3E0002F8EB /* AzurePlayground */ = {
 			isa = PBXGroup;
 			children = (
-				3308FA7E1E81D1E50002F8EB /* AzurePlayground-Bridging-Header.h */,
+				33CD06CF1E831D3A00229C11 /* test.jpg */,
 				3308FA671E81CF3E0002F8EB /* AppDelegate.swift */,
-				3308FA691E81CF3E0002F8EB /* ViewController.swift */,
-				3308FA6B1E81CF3E0002F8EB /* Main.storyboard */,
-				3308FA6E1E81CF3E0002F8EB /* Assets.xcassets */,
-				3308FA701E81CF3E0002F8EB /* LaunchScreen.storyboard */,
+				33CD06CE1E830E2F00229C11 /* Views */,
+				33CD06CD1E830E2100229C11 /* Controllers */,
+				3308FA7E1E81D1E50002F8EB /* AzurePlayground-Bridging-Header.h */,
 				3308FA731E81CF3E0002F8EB /* Info.plist */,
 				33CD06C91E81F0CD00229C11 /* CONSTANTS.swift */,
 			);
@@ -83,6 +86,25 @@
 				3308FA7C1E81D0D70002F8EB /* libxml2.2.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33CD06CD1E830E2100229C11 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3308FA691E81CF3E0002F8EB /* ViewController.swift */,
+				33CD06CB1E830D9600229C11 /* ListBlobViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		33CD06CE1E830E2F00229C11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3308FA6B1E81CF3E0002F8EB /* Main.storyboard */,
+				3308FA6E1E81CF3E0002F8EB /* Assets.xcassets */,
+				3308FA701E81CF3E0002F8EB /* LaunchScreen.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +171,7 @@
 				3308FA721E81CF3E0002F8EB /* LaunchScreen.storyboard in Resources */,
 				3308FA6F1E81CF3E0002F8EB /* Assets.xcassets in Resources */,
 				3308FA6D1E81CF3E0002F8EB /* Main.storyboard in Resources */,
+				33CD06D01E831D3A00229C11 /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3308FA6A1E81CF3E0002F8EB /* ViewController.swift in Sources */,
+				33CD06CC1E830D9600229C11 /* ListBlobViewController.swift in Sources */,
 				33CD06CA1E81F0CD00229C11 /* CONSTANTS.swift in Sources */,
 				3308FA681E81CF3E0002F8EB /* AppDelegate.swift in Sources */,
 			);
