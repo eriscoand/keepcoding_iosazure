@@ -17,6 +17,10 @@
 		33CD06CA1E81F0CD00229C11 /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD06C91E81F0CD00229C11 /* CONSTANTS.swift */; };
 		33CD06CC1E830D9600229C11 /* ListBlobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD06CB1E830D9600229C11 /* ListBlobViewController.swift */; };
 		33CD06D01E831D3A00229C11 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33CD06CF1E831D3A00229C11 /* test.jpg */; };
+		33CD06D21E83354000229C11 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CD06D11E83354000229C11 /* MicrosoftAzureMobile.framework */; };
+		33CD06D41E83361100229C11 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CD06D31E83361100229C11 /* WebKit.framework */; };
+		33CD06D61E83368600229C11 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CD06D51E83368600229C11 /* SafariServices.framework */; };
+		33CD06D81E8336A300229C11 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CD06D71E8336A300229C11 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		33CD06C91E81F0CD00229C11 /* CONSTANTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
 		33CD06CB1E830D9600229C11 /* ListBlobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBlobViewController.swift; sourceTree = "<group>"; };
 		33CD06CF1E831D3A00229C11 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		33CD06D11E83354000229C11 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicrosoftAzureMobile.framework; path = AzurePlayground/MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		33CD06D31E83361100229C11 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		33CD06D51E83368600229C11 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		33CD06D71E8336A300229C11 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +48,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33CD06D81E8336A300229C11 /* Security.framework in Frameworks */,
+				33CD06D61E83368600229C11 /* SafariServices.framework in Frameworks */,
+				33CD06D41E83361100229C11 /* WebKit.framework in Frameworks */,
 				33CD06C81E81D9ED00229C11 /* AZSClient.framework in Frameworks */,
+				33CD06D21E83354000229C11 /* MicrosoftAzureMobile.framework in Frameworks */,
 				3308FA7D1E81D0D70002F8EB /* libxml2.2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,11 +80,10 @@
 		3308FA661E81CF3E0002F8EB /* AzurePlayground */ = {
 			isa = PBXGroup;
 			children = (
-				33CD06CF1E831D3A00229C11 /* test.jpg */,
+				3308FA7E1E81D1E50002F8EB /* AzurePlayground-Bridging-Header.h */,
 				3308FA671E81CF3E0002F8EB /* AppDelegate.swift */,
 				33CD06CE1E830E2F00229C11 /* Views */,
 				33CD06CD1E830E2100229C11 /* Controllers */,
-				3308FA7E1E81D1E50002F8EB /* AzurePlayground-Bridging-Header.h */,
 				3308FA731E81CF3E0002F8EB /* Info.plist */,
 				33CD06C91E81F0CD00229C11 /* CONSTANTS.swift */,
 			);
@@ -82,6 +93,10 @@
 		3308FA791E81D0940002F8EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33CD06D71E8336A300229C11 /* Security.framework */,
+				33CD06D51E83368600229C11 /* SafariServices.framework */,
+				33CD06D31E83361100229C11 /* WebKit.framework */,
+				33CD06D11E83354000229C11 /* MicrosoftAzureMobile.framework */,
 				33CD06C71E81D9ED00229C11 /* AZSClient.framework */,
 				3308FA7C1E81D0D70002F8EB /* libxml2.2.tbd */,
 			);
@@ -100,6 +115,7 @@
 		33CD06CE1E830E2F00229C11 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33CD06CF1E831D3A00229C11 /* test.jpg */,
 				3308FA6B1E81CF3E0002F8EB /* Main.storyboard */,
 				3308FA6E1E81CF3E0002F8EB /* Assets.xcassets */,
 				3308FA701E81CF3E0002F8EB /* LaunchScreen.storyboard */,
@@ -314,6 +330,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/../../../../../../../../../Users/erisco/Desktop",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/AzurePlayground",
 				);
 				INFOPLIST_FILE = AzurePlayground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -336,6 +353,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/../../../../../../../../../Users/erisco/Desktop",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/AzurePlayground",
 				);
 				INFOPLIST_FILE = AzurePlayground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
